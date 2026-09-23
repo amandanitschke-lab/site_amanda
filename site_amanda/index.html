@@ -1,0 +1,811 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amanda | Portfólio Pessoal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f8fa;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e8ebf0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer span {
+    color: #4169e1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4169e1;
+}
+
+
+/* INÍCIO */
+
+.inicio {
+    max-width: 1150px;
+    min-height: 650px;
+    margin: auto;
+    padding: 90px 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.pequeno-titulo {
+    color: #4169e1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 58px;
+    line-height: 1.05;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.inicio h1 span {
+    color: #4169e1;
+}
+
+.descricao {
+    color: #687386;
+    max-width: 620px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #172033;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #4169e1;
+}
+
+
+/* FOTO PRINCIPAL */
+
+.foto-principal {
+    width: 100%;
+    height: 430px;
+    background-color: #e1e5ec;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(23, 32, 51, 0.15);
+}
+
+.foto-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.titulo-secao {
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: #4169e1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2 {
+    font-size: 40px;
+}
+
+
+/* SOBRE */
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.sobre-conteudo p {
+    color: #687386;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.foto-sobre {
+    height: 350px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #e1e5ec;
+}
+
+.foto-sobre img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* INTERESSES */
+
+.interesses {
+    max-width: 100%;
+    background-color: #ffffff;
+}
+
+.interesses > .titulo-secao,
+.interesses > .cards {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #e8ebf0;
+    border-radius: 15px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(23, 32, 51, 0.1);
+}
+
+.foto-card {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e1e5ec;
+    margin-bottom: 25px;
+}
+
+.foto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.numero {
+    position: absolute;
+    top: 235px;
+    right: 25px;
+    color: #b7beca;
+    font-size: 13px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #687386;
+}
+
+
+/* TECNOLOGIAS */
+
+.tecnologia-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.tecnologia-texto p {
+    color: #687386;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.tecnologia-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.tecnologia-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e8ebf0;
+}
+
+.tecnologia-item strong {
+    display: block;
+    color: #4169e1;
+    margin-bottom: 5px;
+}
+
+.tecnologia-item span {
+    font-size: 13px;
+    color: #687386;
+}
+
+
+/* OBJETIVO */
+
+.objetivo {
+    background-color: #172033;
+    color: white;
+    padding: 100px max(20px, calc((100% - 1150px) / 2));
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.objetivo h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.objetivo h2 span {
+    color: #6d8cff;
+}
+
+.objetivo p:not(.pequeno-titulo) {
+    color: #bdc5d4;
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+.objetivo-frase {
+    border-left: 1px solid #526078;
+    padding-left: 45px;
+}
+
+.objetivo-frase span {
+    font-size: 70px;
+    color: #6d8cff;
+    line-height: 0;
+}
+
+.objetivo-frase h3 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #101725;
+    color: white;
+    padding: 35px max(20px, calc((100% - 1150px) / 2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h2 {
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #8f99aa;
+    font-size: 13px;
+}
+
+.copyright {
+    text-align: right;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 42px;
+    }
+
+    .foto-principal {
+        height: 350px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnologia-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivo {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h2 class="logo">AMANDA<span>.</span></h2>
+
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#interesses">Interesses</a></li>
+                <li><a href="#tecnologias">Tecnologia</a></li>
+                <li><a href="#objetivo">Objetivo</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- INÍCIO -->
+
+        <section class="inicio">
+
+            <div class="inicio-texto">
+
+                <p class="pequeno-titulo">
+                    OLÁ, EU SOU A AMANDA
+                </p>
+
+                <h1>
+                    Estudante de tecnologia,
+                    <span>curiosa por natureza.</span>
+                </h1>
+
+                <p class="descricao">
+                    Gosto de aprender coisas novas, enfrentar desafios
+                    e transformar ideias em projetos. Entre estudos,
+                    trabalho e meus hobbies, estou sempre buscando
+                    evoluir um pouco mais.
+                </p>
+
+                <a href="#sobre" class="botao">
+                    Conheça minha história →
+                </a>
+
+            </div>
+
+
+            <!-- FOTO PRINCIPAL -->
+
+            <div class="foto-principal">
+
+                <img src="amanda.jpg" alt="Foto da Amanda">
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE MIM -->
+
+        <section id="sobre" class="secao">
+
+            <div class="titulo-secao">
+
+                <p>01 — SOBRE MIM</p>
+
+                <h2>Quem sou eu?</h2>
+
+            </div>
+
+
+            <div class="sobre-conteudo">
+
+                <div>
+
+                    <p>
+                        Sou uma estudante que gosta de tecnologia e
+                        de aprender coisas novas. Atualmente estou
+                        desenvolvendo meus conhecimentos na área de
+                        programação e desenvolvimento de sites.
+                    </p>
+
+                    <p>
+                        Além dos estudos, também faço parte da minha
+                        rotina de trabalho. Conciliar estudo, trabalho
+                        e vida pessoal me ajuda a desenvolver
+                        responsabilidade, organização e determinação.
+                    </p>
+
+                </div>
+
+
+                <!-- FOTO SOBRE MIM -->
+
+                <div class="foto-sobre">
+
+                    <img src="eu.jpg" alt="Foto da Amanda">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESSES -->
+
+        <section id="interesses" class="secao interesses">
+
+            <div class="titulo-secao">
+
+                <p>02 — MEUS INTERESSES</p>
+
+                <h2>O que faz parte de mim?</h2>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- amor -->
+
+                <div class="card">
+
+                    <div class="foto-card">
+
+                        <img src="amor.jpg" alt="Foto da Amanda com amor">
+
+                    </div>
+
+                    <span class="numero">01</span>
+
+                    <h3>Vôlei</h3>
+
+                    <p>
+                        Um dos momentos que fazem parte de mim é ficar com o nicolas meu namorado a 2 anos e 6 meses
+                    </p>
+
+                </div>
+
+
+                <!-- TRABALHO -->
+
+                <div class="card">
+
+                    <div class="foto-card">
+
+                        <img src="trabalho.jpg" alt="Foto da Amanda no trabalho">
+
+                    </div>
+
+                    <span class="numero">02</span>
+
+                    <h3>Trabalho</h3>
+
+                    <p>
+                        O trabalho faz parte da minha rotina e
+                        contribui para meu crescimento pessoal
+                        e profissional.
+                    </p>
+
+                </div>
+
+
+                <!-- ESTUDOS -->
+
+                <div class="card">
+
+                    <div class="foto-card">
+
+                        <img src="escola.jpg" alt="Foto da Amanda estudando">
+
+                    </div>
+
+                    <span class="numero">03</span>
+
+                    <h3>Aprendizado</h3>
+
+                    <p>
+                        Gosto de descobrir assuntos novos e
+                        desenvolver habilidades que possam me
+                        ajudar no futuro.
+                    </p>
+
+                </div>
+                               <!-- familia -->
+
+                <div class="card">
+
+                    <div class="foto-card">
+
+                        <img src="famili.jpg" alt="Foto da Amanda familia">
+
+                    </div>
+
+                    <span class="numero">04</span>
+
+                    <h3>Trabalho</h3>
+
+                    <p>
+                        minha familia faz parte de mim
+                    </p>
+
+                </div>
+           <!-- gohan -->
+
+                <div class="card">
+
+                    <div class="foto-card">
+
+                        <img src="gohen.jpg" alt="Foto da Amanda com gohan">
+
+                    </div>
+
+                    <span class="numero">05</span>
+
+                    <h3>Aprendizado</h3>
+
+                    <p>
+                        Gosto de estar com o gohan
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECNOLOGIA -->
+
+        <section id="tecnologias" class="secao tecnologia">
+
+            <div class="titulo-secao">
+
+                <p>03 — TECNOLOGIA</p>
+
+                <h2>O que estou aprendendo?</h2>
+
+            </div>
+
+
+            <div class="tecnologia-conteudo">
+
+                <div class="tecnologia-texto">
+
+                    <p>
+                        A tecnologia é uma área que estou conhecendo
+                        cada vez mais. Durante meus estudos, venho
+                        aprendendo diferentes conceitos de programação
+                        e desenvolvimento.
+                    </p>
+
+                    <p>
+                        Quero continuar explorando novas ferramentas
+                        e tecnologias para transformar o conhecimento
+                        em projetos reais.
+                    </p>
+
+                </div>
+
+
+                <div class="tecnologia-lista">
+
+                    <div class="tecnologia-item">
+                        <strong>HTML</strong>
+                        <span>Estrutura de páginas</span>
+                    </div>
+
+                    <div class="tecnologia-item">
+                        <strong>CSS</strong>
+                        <span>Design e estilização</span>
+                    </div>
+
+                    <div class="tecnologia-item">
+                        <strong>Python</strong>
+                        <span>Programação</span>
+                    </div>
+
+                    <div class="tecnologia-item">
+                        <strong>Java</strong>
+                        <span>Lógica e programação</span>
+                    </div>
+
+                    <div class="tecnologia-item">
+                        <strong>GitHub</strong>
+                        <span>Projetos e versionamento</span>
+                    </div>
+
+                    <div class="tecnologia-item">
+                        <strong>+ Novas</strong>
+                        <span>Tecnologias que ainda quero aprender</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVO -->
+
+        <section id="objetivo" class="objetivo">
+
+            <div>
+
+                <p class="pequeno-titulo">
+                    04 — MEU FUTURO
+                </p>
+
+                <h2>
+                    Quero continuar
+                    <span>evoluindo.</span>
+                </h2>
+
+                <p>
+                    Meu objetivo é continuar estudando, adquirir
+                    experiência e descobrir qual caminho dentro
+                    da tecnologia combina mais comigo.
+                </p>
+
+                <p>
+                    Quero transformar tudo que estou aprendendo
+                    em oportunidades para meu futuro profissional.
+                </p>
+
+            </div>
+
+
+            <div class="objetivo-frase">
+
+                <span>“</span>
+
+                <h3>
+                    Aprender hoje para
+                    construir o amanhã.
+                </h3>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div>
+
+            <h2>AMANDA<span>.</span></h2>
+
+            <p>
+                Estudante • Tecnologia • Aprendizado
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Amanda. Minha Landing Page Pessoal.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
